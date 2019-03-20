@@ -3,3 +3,7 @@
 
 # Distribution
 /build
+
+package-lock.json
+
+.idea/*
