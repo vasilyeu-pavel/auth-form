@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import {Provider} from 'react-redux';
+import store from '../store';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Auth form</h1>
-            </div>
-        );
-    }
-}
+import '../assets/styles/App.scss';
 
+const App = () => (
+    <Provider store={store}>
+        <div>
+            <h1>Auth form</h1>
+        </div>
+    </Provider>
+);
 export default App;
