@@ -1,0 +1,17 @@
+export const HANDLE_LOGIN = 'HANDLE_LOGIN';
+
+export const HANDLE_PASSWORD = 'HANDLE_PASSWORD';
+
+export const REMIND_PASSWORD = 'REMIND_PASSWORD';
+
+export const ERROR_MESSAGE = 'ERROR_MESSAGE';
+
+export const START_FETCH = 'START_FETCH';
+
+export const SUCCES_RESET = 'SUCCES_RESET';
+
+export const REMOVE_RESET_MESSAGE = 'REMOVE_RESET_MESSAGE';
+
+export const SUBMIT_FORM = 'SUBMIT_FORM';
+
+export const SUCCES_SIGN_IN = 'SUCCES_SIGN_IN';

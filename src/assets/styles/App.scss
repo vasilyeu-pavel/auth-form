@@ -71,6 +71,9 @@ input {
       .sign-in-input {
         margin: 10px 0;
       }
+      .password {
+        position: relative;
+      }
       .sign-in-input-label {
         font-size: 14px;
         color: #000;
@@ -93,4 +96,20 @@ input {
     border: 0;
     font-size: 15px;
   }
+}
+
+.remind-button {
+  position: absolute;
+  right: 15px;
+  top: 33px;
+  cursor: pointer;
+  color: #362d90;
+  font-size: 14px;
+}
+
+.validation-message {
+  color: #b00;
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
 }

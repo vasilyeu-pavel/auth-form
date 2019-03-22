@@ -1,6 +1,11 @@
 import React from "react";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Login from "../Login/Login";
+import Password from "../Password/Password";
+import Submit from "../Submit/Submit";
 
-const AuthForm = () => {
+const AuthForm = ({ loading }) => {
     return (
         <div className="auth-form">
             <div className="auth-form-main">
@@ -9,23 +14,21 @@ const AuthForm = () => {
                     <span className="header-item register-button">Регистрация</span>
                </div>
                 <div className="auth-form-main-sign-in">
-                    <div className="sign-in-input login">
-                        <span className="sign-in-input-label">Эл. почта или телефон</span>
-                        <input/>
-                    </div>
-                    <div className="sign-in-input password">
-                        <span className="sign-in-input-label">Пароль</span>
-                        <input/>
-                    </div>
+                    <Login />
+                    <Password />
                </div>
             </div>
             <div className="auth-form-footer">
-                <div className="auth-form-footer-submit">
-                    <button className="submit-button">Войти на площадку</button>
-                </div>
+                <Submit />
             </div>
         </div>
     )
 };
 
-export default AuthForm;
+AuthForm.propTypes = {
+    loading: PropTypes.bool.isRequired,
+};
+
+export default connect(state => ({
+    loading: state.authForm.loading
+}))(AuthForm);
