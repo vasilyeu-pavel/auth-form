@@ -8,7 +8,7 @@ import '../../assets/styles/App.scss';
 const App = () => (
     <Provider store={store}>
         <div className="app">
-            <AuthForm />
+            <AuthForm/>
         </div>
     </Provider>
 );

@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { handleLogin } from "../../actions";
+import {connect} from 'react-redux';
+import {handleLogin} from "../../actions";
 
 const onChange = (handleLogin, e) => {
     const value = e.target.value;
     handleLogin(value);
 };
 
-const Login = ({ handleLogin, login }) => {
+const Login = ({handleLogin, login}) => {
     let logginInput = null;
 
     useEffect(() => {
@@ -19,9 +19,9 @@ const Login = ({ handleLogin, login }) => {
         <div className="sign-in-input login">
             <span className="sign-in-input-label">Эл. почта или телефон</span>
             <input
-              value={login}
-              ref={(input => logginInput = input)}
-              onChange={onChange.bind(null, handleLogin)}
+                value={login}
+                ref={(input => logginInput = input)}
+                onChange={onChange.bind(null, handleLogin)}
             />
         </div>
     )
@@ -39,4 +39,4 @@ Login.defaultProps = {
 
 export default connect(state => ({
     login: state.authForm.login,
-}), { handleLogin })(Login);
+}), {handleLogin})(Login);

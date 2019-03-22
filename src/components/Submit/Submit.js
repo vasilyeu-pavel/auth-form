@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { submitForm } from '../../actions';
+import {connect} from 'react-redux';
+import {submitForm} from '../../actions';
 
-const Submit = ({ login, password, errorMessage, submitForm }) => {
+const Submit = ({login, password, errorMessage, submitForm}) => {
     const activeStyle = login.length && password.length ? 1 : 0.7;
     return (
         <div className="auth-form-footer-submit">
@@ -39,5 +39,5 @@ export default connect(state => ({
     login: state.authForm.login,
     password: state.authForm.password,
     errorMessage: state.authForm.error.message,
-}), { submitForm })(Submit);
+}), {submitForm})(Submit);
 

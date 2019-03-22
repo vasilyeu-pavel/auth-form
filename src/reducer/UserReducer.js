@@ -1,4 +1,4 @@
-import { SUCCES_SIGN_IN } from '../constants';
+import {SUCCES_SIGN_IN} from '../constants';
 
 const initialState = {
     user: null,

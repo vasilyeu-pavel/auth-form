@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { handlePassword, remindPassword, removeResetMessage } from "../../actions";
+import {connect} from 'react-redux';
+import {handlePassword, remindPassword, removeResetMessage} from "../../actions";
 
 const onChange = (handlePassword, e) => {
     const password = e.target.value;
     handlePassword(password);
 };
 
-const Password = ({ handlePassword, remindPassword, removeResetMessage, resetMessage, password }) => {
+const Password = ({handlePassword, remindPassword, removeResetMessage, resetMessage, password}) => {
     const type = resetMessage.length ? 'text' : 'password';
     return (
         <div className="sign-in-input password">
@@ -48,4 +48,4 @@ Password.defaultProps = {
 export default connect(state => ({
     resetMessage: state.authForm.resetMessage,
     password: state.authForm.password,
-}), { handlePassword, remindPassword, removeResetMessage })(Password);
+}), {handlePassword, remindPassword, removeResetMessage})(Password);

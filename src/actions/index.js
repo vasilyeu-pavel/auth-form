@@ -1,4 +1,4 @@
-import { HANDLE_LOGIN, HANDLE_PASSWORD, REMIND_PASSWORD, REMOVE_RESET_MESSAGE, SUBMIT_FORM } from '../constants';
+import {HANDLE_LOGIN, HANDLE_PASSWORD, REMIND_PASSWORD, REMOVE_RESET_MESSAGE, SUBMIT_FORM} from '../constants';
 
 export const handleLogin = login => ({
     type: HANDLE_LOGIN,
@@ -10,8 +10,8 @@ export const handlePassword = password => ({
     payload: password,
 });
 
-export const remindPassword = () => ({ type: REMIND_PASSWORD });
+export const remindPassword = () => ({type: REMIND_PASSWORD});
 
-export const removeResetMessage = () => ({ type: REMOVE_RESET_MESSAGE });
+export const removeResetMessage = () => ({type: REMOVE_RESET_MESSAGE});
 
-export const submitForm = () => ({ type: SUBMIT_FORM });
+export const submitForm = () => ({type: SUBMIT_FORM});
